@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do App</title>
-
+    <title>To-Do List</title>
+    
     <!-- Skeleton CSS -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
 </head>
+
 <body>
-    
+    <main id="app">
+        <h1>{{ title }}</h1>
+        <!-- vue's way of adding a function when this data is submitted. -> .prevent prevents Default -->
+        <form @submit.prevent="addTodo">
+            <label for="newTodo"><h4>What needs to be done?</h4></label>
+            <!-- v-model links with elements on your js file -->
+            <input v-model="newTodo" type="text" name="newTodo" id="newTodo">
+            <button type="submit" name="button">Add</button>
+            
+        </form>
+    </main>
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
