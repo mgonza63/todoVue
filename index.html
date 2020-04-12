@@ -13,7 +13,8 @@
 <body>
     <main id="app">
         <h1>{{ title }}</h1>
-        <!-- vue's way of adding a function when this data is submitted. -> .prevent prevents Default -->
+        <!-- vue - adding a function when this data is submitted. 
+            .prevent prevents Default -->
         <form @submit.prevent="addTodo">
             <label for="newTodo"><h4>What needs to be done?</h4></label>
             <!-- v-model links with elements on your js file -->
@@ -21,6 +22,12 @@
             <button type="submit" name="button">Add</button>
             
         </form>
+        <ul>
+            <!-- vue - for every item in array of items. 
+                Repeats over the 'todos' array and gives
+                the name 'todo' to each item -->
+            <li v-for="todo in todos">{{ todo.title }}</li>
+        </ul>
     </main>
 
 

@@ -15,7 +15,9 @@ const app = new Vue ({
                 title: this.newTodo,
                 done: false,
 
-            })
+            });
+            // clears out the form 
+            this.newTodo = ''
         }
 
     }
