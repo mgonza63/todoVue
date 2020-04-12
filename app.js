@@ -18,6 +18,11 @@ const app = new Vue ({
             });
             // clears out the form 
             this.newTodo = ''
+        },
+        
+        removeTodo(todo) {
+            const todoIndex = this.todos.indexOf(todo);
+            this.todos.splice(todoIndex, 1);
         }
 
     }

@@ -26,7 +26,11 @@
             <!-- vue - for every item in array of items. 
                 Repeats over the 'todos' array and gives
                 the name 'todo' to each item -->
-            <li v-for="todo in todos">{{ todo.title }}</li>
+            <li v-for="todo in todos">
+                <!-- @click refers to a function on your methods -->
+                <span>{{ todo.title }}</span><button type="button" @click="removeTodo(todo)">Remove</button>
+            </li>
+            <!-- v-for is going reiterate over all the data inside it. -->
         </ul>
     </main>
 
