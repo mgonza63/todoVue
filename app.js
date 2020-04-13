@@ -1,7 +1,7 @@
 const app = new Vue ({
     el: '#app',
     data: {
-        title: 'Todo-App with Vue.js',
+        title: 'To-Do App with Vue.js',
         newTodo: '',
         // create an empty array to push todos into
         todos: [],
@@ -10,16 +10,16 @@ const app = new Vue ({
     methods: {
         addTodo() {
             // use 'this' to refer to the instance and access the data above
-            // push an object that includes the 'todo' and 'done' for future use
+            // push an object (in case we want to add more attributes) 
+            // that includes the title of the todo. 
             this.todos.push({
                 title: this.newTodo,
-                done: false,
-
             });
             // clears out the form 
             this.newTodo = ''
         },
-        
+        //todoIndex select the index of the selected todo
+        // splice removes the selected todo in the array
         removeTodo(todo) {
             const todoIndex = this.todos.indexOf(todo);
             this.todos.splice(todoIndex, 1);
