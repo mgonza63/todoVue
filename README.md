@@ -6,4 +6,4 @@
 
 # Future Development
 
-å For future development I would create a Mongo Database to save the Todos and maybe start creating a Trello-like system.
+For future development I would create a Mongo Database to save the Todos and maybe start creating a Trello-like system.
