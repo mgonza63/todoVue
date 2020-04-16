@@ -25,16 +25,36 @@
                 
             </form>
             <hr>
-            <ul>
-                <!-- vue - for every item in array of items. 
-                    Repeats over the 'todos' array and gives
-                    the name 'todo' to each item -->
-                <li v-for="todo in todos">
-                    <!-- @click refers to a function on your methods -->
-                    <span>{{ todo.title }}</span><button type="button" @click="removeTodo(todo)">Remove</button>
-                </li>
-                <!-- v-for is going reiterate over all the data inside it. -->
-            </ul>
+
+            <div class="container second">
+                <div class="row">
+                    <div class="four columns">To Do:
+                        <ul>
+                            <!-- vue - for every item in array of items. 
+                                Repeats over the 'todos' array and gives
+                                the name 'todo' to each item -->
+                            <li v-for="todo in todos">
+                                <!-- @click refers to a function on your methods -->
+                                <span>{{ todo.title }}</span><button type="button" @click="removeTodo(todo)" class="removeTodo">x</button>
+                            </li>
+                            <!-- v-for is going reiterate over all the data inside it. -->
+                        </ul>
+        
+                    </div>
+                    <div class="four columns">Doing:
+                        <ul>
+                            
+                        </ul>
+        
+                    </div>
+                    <div class="four columns">Done:
+                        <ul>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 

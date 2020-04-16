@@ -22,3 +22,15 @@ body {
 
     border: 2px solid #ea9085;
 }
+
+.second {
+    width: 100%;
+    box-sizing: border-box; 
+}
+.four {
+    border: 2px solid #ea9085;
+    padding-bottom: 5%;
+}
+.removeTodo {
+    padding: 5%;
+}
